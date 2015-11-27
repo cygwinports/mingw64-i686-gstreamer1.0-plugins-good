@@ -14,3 +14,14 @@ DESCRIPTION="GStreamer Good Plug-ins is a set of plug-ins that are
 consider to have good quality code, correct functionality, and a
 preferred license (LGPL for the plug-in code, LGPL or LGPL-compatible
 for the supporting library)."
+
+PKG_NAMES="${NAME} ${NAME}-extras"
+mingw64_i686_gstreamer1_0_plugins_good_CONTENTS="
+	--exclude=libgstaa* --exclude=libgstcaca*
+	${CROSS_PREFIX#/}
+	usr/share/doc/
+"
+mingw64_i686_gstreamer1_0_plugins_good_extras_CONTENTS="
+	${CROSS_LIBDIR#/}/gstreamer-1.0/libgstaasink.dll
+	${CROSS_LIBDIR#/}/gstreamer-1.0/libgstcacasink.dll
+"
